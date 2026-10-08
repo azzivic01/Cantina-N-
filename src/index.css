@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Young Serif", Georgia, serif;
+  --font-sans: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  /* Cores */
+  --tema-color-bg: #F4EEE1;
+  --tema-color-surface: #FFFBF2;
+  --tema-color-border: #D9CFB8;
+  --tema-color-text: #1F1B16;
+  --tema-color-text-muted: #5E564A;
+  --tema-color-accent: #3F5A2A;
+  --tema-color-accent-ink: #3F5A2A;
+  --tema-color-on-accent: #FFFBF2;
+  --tema-color-deco-1: #C9962B;
+  --tema-color-deco-2: #B4552D;
+  --tema-color-deco-3: #8FA37A;
+
+  /* Fontes */
+  --tema-font-display: var(--font-serif);
+  --tema-font-body: var(--font-sans);
+  --tema-font-label: var(--font-sans);
+  --tema-font-mono: var(--font-mono);
+
+  /* Forma */
+  --tema-radius: 3px;
+  --tema-radius-lg: 6px;
+  --tema-border-width: 1.5px;
+  --tema-shadow-hard: none;
+
+  /* Texto */
+  --tema-label-transform: uppercase;
+  --tema-label-tracking: 0.14em;
+  --tema-display-transform: none;
+
+  /* Movimento */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 700ms;
+  --motion-duration-cinematic: 1000ms;
+  --motion-easing-base: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-stagger: 80ms;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+  font-family: var(--tema-font-body);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+  font-family: var(--tema-font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--tema-color-accent-ink);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--tema-color-accent);
+  color: var(--tema-color-on-accent);
+}
+
+/* Utilitários semânticos ancorados unicamente nas variáveis do tema */
+.font-display {
+  font-family: var(--tema-font-display);
+  text-transform: var(--tema-display-transform);
+}
+
+.font-body {
+  font-family: var(--tema-font-body);
+}
+
+.font-label {
+  font-family: var(--tema-font-label);
+  text-transform: var(--tema-label-transform);
+  letter-spacing: var(--tema-label-tracking);
+}
+
+.font-price {
+  font-family: var(--tema-font-mono);
+}
+
+.bg-tema-bg {
+  background-color: var(--tema-color-bg);
+}
+
+.bg-tema-surface {
+  background-color: var(--tema-color-surface);
+}
+
+.bg-tema-accent {
+  background-color: var(--tema-color-accent);
+}
+
+.text-tema-text {
+  color: var(--tema-color-text);
+}
+
+.text-tema-muted {
+  color: var(--tema-color-text-muted);
+}
+
+.text-tema-accent-ink {
+  color: var(--tema-color-accent-ink);
+}
+
+.text-tema-on-accent {
+  color: var(--tema-color-on-accent);
+}
+
+.border-tema {
+  border-color: var(--tema-color-border);
+  border-width: var(--tema-border-width);
+}
+
+.rounded-tema {
+  border-radius: var(--tema-radius);
+}
+
+.rounded-tema-lg {
+  border-radius: var(--tema-radius-lg);
+}
+
+.shadow-tema-hard {
+  box-shadow: var(--tema-shadow-hard);
+}

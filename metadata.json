@@ -1,0 +1,6 @@
+{
+  "name": "Cantina Nô",
+  "description": "Restaurante e cantina de bairro com cozinha de panela, mesa compartilhada e cardápio de forno.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
